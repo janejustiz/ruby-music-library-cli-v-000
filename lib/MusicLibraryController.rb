@@ -75,8 +75,11 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     input = gets.strip
-    Song.all.sort_by!{|word| word.name}.each do |song|
-      puts "Playing #{song.name} by #{song.artist.name}" if song.name == input
+    Song.all.sort_by!{|word| word.name}
+    Song.all.each do |song|
+      if song.name == input
+        puts "Playing #{song.name} by #{song.artist.name}"
+      end
     end
   end
 end
