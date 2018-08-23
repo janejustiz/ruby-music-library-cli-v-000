@@ -76,7 +76,5 @@ class MusicLibraryController
     self.list_songs
     puts "Which song number would you like to play?"
     input = gets.strip
-    song = Song.all.detect{|x| x.name == input}
-    puts "Playing #{song.name} by #{song.artist.name}"
   end
 end
