@@ -59,8 +59,7 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     input = gets.strip
-    x = Song.all.select{|song| song.artist == input}
-    x.each_with_index do |song, index|
+    Song.all.select{|song| song.artist == input}.each_with_index do |song, index|
       puts "#{index + 1}. #{song.name}"
     end
   end
