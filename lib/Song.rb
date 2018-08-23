@@ -15,7 +15,7 @@ class Song
 
   def save
     @@all << self
-    @@all.uniq
+    @@all.uniq!
   end
 
   def self.all
