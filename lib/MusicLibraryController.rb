@@ -76,6 +76,6 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     input = gets.strip.to_i
     song = Song.all.sort_by!{|word| word.name}[input - 1]
-    "Playing #{song.name} by #{song.artist.name}"
+    "Playing #{song.name} by #{song.artist.name}" unless song == nil
   end
 end
