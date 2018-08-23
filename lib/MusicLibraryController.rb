@@ -60,7 +60,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     input = gets.strip
     x = Song.all.select{|song| song.artist == input}
-      puts "#{x}"
+      puts "#{x.name}"
     end
   end
 
