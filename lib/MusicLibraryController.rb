@@ -39,7 +39,9 @@ class MusicLibraryController
   end
 
   def list_songs
-
+    Songs.all.each_with_index do |song, index|
+      puts "#{index}. #{song.artist} - #{song.name} - #{song.genre}"
+    end
   end
 
   def list_artists
